@@ -6,8 +6,12 @@ This repository showcases a series of projects focused on evaluating Android dev
 The first phase of the project established a baseline by developing an expert system that assesses Android device security. This system used a rule-based approach to evaluate factors such as app permissions, OS version, and network security settings, providing a foundational understanding of the security landscape.
 
 ### Phase 2: Advanced Security Evaluation Using Machine Learning
-Building on the initial expert system, the second phase introduced machine learning to automate and refine the security evaluation process. A Multi-Layer Perceptron (MLP) model, implemented using TensorFlow, was trained to predict security scores based on the same input data used in the expert system. This phase involved extensive experimentation with various neural network architectures:
+In Phase 2, the project introduces machine learning to enhance the security evaluation process, with a focus on implementing a Multi-Layer Perceptron (MLP) using TensorFlow. A key aspect of this phase is the interaction with a database to retrieve and preprocess the necessary training and testing data. This section details how the project connects to the Firebase Firestore database, manages data retrieval, and prepares the data for machine learning.
 
+**Database Design and Connection**
+The Android application used in Phase 1 was leveraged to generate a dataset by evaluating a series of dummy Android devices using the expert system. The inputs (e.g., app permissions, OS version, network settings) and outputs (e.g., security scores) were stored in Firebase Firestore, a cloud-hosted NoSQL database, which provides flexible, scalable data storage ideal for this type of project.
+
+**Multilayer Perceptron Design**
 - 2-Layer MLP: Basic architecture to test initial model performance.
 - 3-Layer MLP: Achieved the best balance between accuracy and resource consumption, with a Mean Absolute Error (MAE) just under 40%.
 - 4 and 5-Layer MLPs: Explored deeper networks but with diminishing returns in accuracy and increased memory usage.
